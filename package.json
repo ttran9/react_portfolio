@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "start": "node server.js",
+    "dev": "webpack-dev-server --mode production",
+    "build": "webpack --mode production",
+    "exec": "npm run build && npm run start",
+    "execwp": "npm run build && npm run dev"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +20,8 @@
     "@babel/preset-react": "^7.9.4",
     "@popperjs/core": "^2.1.1",
     "babel-loader": "^8.1.0",
-    "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
+    "css-loader": "^3.4.2",
     "cssloader": "^1.1.1",
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.3",
@@ -30,5 +33,9 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "style-loader": "^1.1.3"
   }
 }
