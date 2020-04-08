@@ -13,7 +13,18 @@ class Home extends Component {
                 did this using GitHub pages and while that is sufficient and
                 allows me to serve static web pages I wanted to go with a
                 different approach to get more familiar with deploying to remote
-                Linux server(s).
+                Linux server(s). I have also deployed projects to other services
+                such as Linode and Heroku and both are sufficient as well.
+                Currently, I am just using AWS because it is heavily used but I
+                am open to using Linode or Heroku once I have become familiar
+                enough with AWS or if I come across an application that requires
+                it.
+              </p>
+              <p className="mb-4">
+                Building this website allowed me to navigate basic configuration
+                files for Apache and generate a certificate to ensure this
+                website is able to run with HTTPs instead of just processing
+                insecure requests.
               </p>
             </div>
           </div>
