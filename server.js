@@ -9,7 +9,7 @@ const frontend = path.join(__dirname, "dist/");
 app.use("/", express.static(frontend));
 
 // all the unknown requests are redirected to the react SPA
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(frontend, "index.html"));
 });
 
