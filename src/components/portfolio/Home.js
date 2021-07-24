@@ -1,37 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
+import * as Constants from "../../Constants";
+import { Link } from "react-router-dom";
 
-class Home extends Component {
-  render() {
-    return (
-      <div className="light-overlay landing-inner text-dark">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <p className="mb-4">
-                I built this website in React in order to get more familiar with
-                deploying web applications to remote Linux Servers. Previously I
-                did this using GitHub pages and while that is sufficient and
-                allows me to serve static web pages I wanted to go with a
-                different approach to get more familiar with deploying to remote
-                Linux server(s). I have also deployed projects to other services
-                such as Linode and Heroku and both are sufficient as well.
-                Currently, I am just using AWS because it is heavily used but I
-                am open to using Linode or Heroku once I have become familiar
-                enough with AWS or if I come across an application that requires
-                it.
-              </p>
-              <p className="mb-4">
-                Building this website allowed me to navigate basic configuration
-                files for Apache and generate a certificate to ensure this
-                website is able to run with HTTPs instead of just processing
-                insecure requests.
-              </p>
-            </div>
+const Home = () => {
+  const projects_page = (
+    <Link to={`${Constants.PROJECT_URL}`}>projects page</Link>
+  );
+  const about_page = <Link to={`${Constants.ABOUT_URL}`}>about page</Link>;
+  return (
+    <div className="light-overlay landing-inner text-dark">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <p className="mb-4">
+              I built this website in React in order to get more familiar with
+              deploying web applications to remote Linux Servers. I have
+              deployed web applications using Linode, AWS, and Heroku. While
+              Heroku makes the process very simple I felt too much of the
+              configuration is done out of the box. Instead I wanted to get more
+              doing the basic configurations myself so I have also used Linode
+              and AWS.
+            </p>
+            <p>
+              Visit my {projects_page} to view my latest projects or the{" "}
+              {about_page} to view some of the technologies I have recently
+              used.
+            </p>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Home;
