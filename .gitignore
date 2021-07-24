@@ -59,3 +59,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# vscode related content and configuration.
+.vscode
+
+# helper scripts
+deploy_node_modules.sh
+deploy_output.sh
